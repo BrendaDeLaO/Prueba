@@ -21,17 +21,17 @@ public class Product {
     @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "seleccion_0")
-    private Integer seleccion_0;
+    @Column(name = "seleccion_c")
+    private Integer seleccion_c;
 
-    @Column(name = "seleccion_1")
-    private Integer seleccion_1;
+    @Column(name = "seleccion_u")
+    private Integer seleccion_u;
 
-    @Column(name = "seleccion_3")
-    private Integer seleccion_3;
+    @Column(name = "seleccion_t")
+    private Integer seleccion_t;
 
-    @Column(name = "seleccion_5")
-    private Integer seleccion_5;
+    @Column(name = "seleccion_cn")
+    private Integer seleccion_cn;
 
     @Column(name = "seleccion_md")
     private Integer seleccion_md;

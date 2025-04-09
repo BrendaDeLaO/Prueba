@@ -1,10 +1,10 @@
 CREATE TABLE product (
-    id int IDENTITY(1,1) PRIMARY KEY,
-    nombre nvarchar(100) NOT NULL,
-    selecion_0 int,
-    selecion_1 int,
-    selecion_3 int,
-    selecion_5 int,
-    selecion_md int,
-    salida date NOT NULL
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    nombre NVARCHAR(100) NOT NULL,
+    seleccion_c INT,
+    seleccion_u INT,
+    seleccion_t INT,
+    seleccion_cn INT,
+    seleccion_md INT,
+    salida DATE NOT NULL
 );

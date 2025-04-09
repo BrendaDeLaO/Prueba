@@ -3,7 +3,9 @@ package pe.edu.vallegrande.project.rest;
 import pe.edu.vallegrande.project.model.Product;
 import pe.edu.vallegrande.project.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -44,6 +46,13 @@ public class ProductRest {
     @PutMapping("/update")
     public Product update(@RequestBody Product product) {
         return productService.update(product);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id) {
+        Optional<Product> productOptional = productService.findById(id);
+        productService.delete(productOptional.get());
+        return ResponseEntity.ok("Producto eliminado con éxito.");
     }
 
 }

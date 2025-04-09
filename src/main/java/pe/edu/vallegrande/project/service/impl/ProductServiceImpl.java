@@ -35,15 +35,23 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product save(Product product) {
         log.info("Registrando Datos: " + product.toString());
-        product.setSalida("A");
+       
         return ProductRepository.save(product);
     }
 
     @Override
     public Product update(Product product) {
         log.info("Editando Datos: " + product.toString());
-        product.setSalida("A");
+        
         return ProductRepository.save(product);
     }
+
+    @Override
+    public void delete(Product product) {
+        ProductRepository.delete(product);
+    }
+
+
+
 
 }
